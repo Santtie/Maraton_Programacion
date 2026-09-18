@@ -1,0 +1,24 @@
+FUENTE: Decreto 1377 de 2013 - Reglamentario de la Ley 1581 de 2012
+NORMA: Decreto 1377 de 2013
+URL: https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=53646
+FECHA_CONSULTA: 2026-09-18
+ESTADO: seed parcial - verificar literalidad completa de cada artículo antes del evento
+
+### Artículo 5
+Autorización del Titular. El Responsable del Tratamiento deberá adoptar procedimientos para
+solicitar, a más tardar en el momento de la recolección de sus datos, la autorización del
+Titular para el Tratamiento de los mismos e informarle los datos personales que serán
+recolectados así como todos los Tratamientos a los que serán sometidos sus datos personales.
+
+### Artículo 21
+Área o persona responsable de atención a peticiones, consultas y reclamos. Los Responsables
+del Tratamiento deben designar un área o persona que asuma la función de protección de datos
+personales atendiendo las peticiones, consultas y reclamos de los Titulares, en ejercicio de
+los derechos a que se refiere la Ley 1581 de 2012 y el presente decreto.
+[RESUMEN - completar con texto literal integral]
+
+NOTA: los plazos exactos para tramitar consultas (10 días hábiles) y reclamos (15 días
+hábiles, prórroga de 8 días hábiles) están fijados en la Ley 1581 de 2012, artículos 14 y 15
+(ver ley_1581_2012_proteccion_datos.txt), no en este decreto. El decreto reglamenta el
+procedimiento operativo (autorización, avisos de privacidad, registro nacional de bases de
+datos).

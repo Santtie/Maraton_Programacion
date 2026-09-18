@@ -1,0 +1,30 @@
+FUENTE: Ley 1266 de 2008 - Disposiciones generales del Habeas Data financiero, crediticio,
+comercial, de servicios y proveniente de terceros países
+NORMA: Ley 1266 de 2008
+URL: PENDIENTE - localizar identificador correcto en secretariasenado.gov.co o
+suin-juriscol.gov.co antes del evento (intento con alcaldiabogota.gov.co i=33735 no
+correspondió a esta ley)
+FECHA_CONSULTA: 2026-09-18
+ESTADO: pendiente - este archivo es solo un placeholder de estructura, NO contiene texto
+verificado. No usar para responder consultas hasta completarlo.
+
+### Artículo 1
+[PENDIENTE] Objeto de la ley: desarrollar el derecho constitucional al Habeas Data respecto
+de la información financiera, crediticia, comercial, de servicios y la proveniente de
+terceros países, y regular el manejo de dicha información.
+
+### Artículo 3
+[PENDIENTE] Definiciones (titular, fuente de información, operador de información, usuario,
+dato financiero, dato de servicios, dato público).
+
+### Artículo 13
+[PENDIENTE] Permanencia y caducidad del dato negativo. IMPORTANTE: al momento de redactar
+este seed no se cuenta con el texto literal verificado del plazo de caducidad del reporte
+negativo en centrales de riesgo. NO usar cifras de memoria en producción: completar este
+artículo con el texto oficial antes de que el asistente cite plazos de caducidad en casos de
+solicitud de supresión relacionados con centrales de riesgo (Datacrédito, CIFIN, etc.).
+
+INSTRUCCIÓN PARA EL EQUIPO: buscar "Ley 1266 de 2008" en secretariasenado.gov.co o
+suin-juriscol.gov.co, copiar el texto literal de los artículos 1, 3, 8 (deberes de las
+fuentes), 16 (procedimiento de reclamos) y 13 (permanencia de la información), y reemplazar
+este archivo completo antes del evento.

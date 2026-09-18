@@ -1,0 +1,11 @@
+.venv/
+models/
+!models/.gitkeep
+eval/*.json
+eval/*.md
+!eval/README.md
+data/sft/*.jsonl
+data/corpus/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

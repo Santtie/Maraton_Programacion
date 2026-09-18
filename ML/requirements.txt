@@ -1,0 +1,13 @@
+# Entrenamiento / preparación de datos (ML). Independiente de backend/requirements.txt
+torch>=2.2
+transformers>=4.44
+datasets>=2.20
+peft>=0.12
+trl>=0.9
+accelerate>=0.33
+bitsandbytes>=0.43 ; platform_system != "Windows"
+sentencepiece>=0.2
+sentence-transformers>=3.0
+huggingface_hub>=0.24
+numpy>=1.26
+tqdm>=4.66

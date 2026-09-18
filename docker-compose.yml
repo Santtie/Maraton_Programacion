@@ -1,0 +1,26 @@
+# Arranque con un solo comando (reto extra E3): `docker compose up`
+#
+# Levanta el backend de ProyectadurIA. Requiere un archivo backend/.env (copiar desde
+# backend/.env.example). Si LLM_PROVIDER=ollama y Ollama corre en el host (fuera de Docker),
+# usa OLLAMA_BASE_URL=http://host.docker.internal:11434 en backend/.env en Windows/Mac, o la
+# IP del host en Linux.
+#
+# El frontend (Vite/Vue) se agrega aquí como segundo servicio cuando esté listo para
+# contenerizarse; mientras tanto se sigue corriendo con `npm run dev` según frontend/README.md.
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/app/backend
+      - ./corpus:/app/corpus
+      - backend_media:/app/backend/media
+      - backend_chroma:/app/backend/chroma_db
+
+volumes:
+  backend_media:
+  backend_chroma:

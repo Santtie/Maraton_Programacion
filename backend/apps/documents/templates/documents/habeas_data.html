@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    @page { size: letter; margin: 2.5cm; }
+    body { font-family: Helvetica, Arial, sans-serif; font-size: 11pt; color: #1a1a1a; line-height: 1.5; }
+    h1 { font-size: 14pt; margin-bottom: 0; }
+    .subtitulo { color: #555; font-size: 9pt; margin-top: 2px; margin-bottom: 20px; }
+    .cuerpo { white-space: pre-wrap; }
+    .footer { margin-top: 24px; font-size: 8pt; color: #777; border-top: 1px solid #ccc; padding-top: 8px; }
+  </style>
+</head>
+<body>
+  <h1>ProyectadurIA — {{ tipo_label }}</h1>
+  <p class="subtitulo">Documento generado automáticamente a partir de la Ley 1581 de 2012 y la Constitución Política de Colombia (Art. 15).</p>
+  <div class="cuerpo">{{ texto }}</div>
+  <div class="footer">
+    Generado el {{ generado_en }} por ProyectadurIA. Este documento es un borrador de apoyo y no sustituye la asesoría de un abogado.
+  </div>
+</body>
+</html>
