@@ -6,22 +6,31 @@ libertad de expresión e información, igualdad, libre desarrollo de la personal
 Habeas Data), con foco práctico en las cinco solicitudes de Habeas Data (consulta,
 actualización, rectificación, supresión, revocatoria).
 
-## Estado actual
+## Estado actual (2026-09-18)
 
-Los archivos `.txt` de este directorio son una **semilla real pero parcial**: el texto fue
-obtenido de fuentes oficiales/semioficiales (Secretaría del Senado, Alcaldía de Bogotá –
-Régimen Legal, Función Pública) el 2026-09-18, pero **no todos los artículos están
-transcritos de forma 100% literal e íntegra** (algunos fragmentos fueron resumidos por la
-herramienta de extracción). Cada archivo indica su `ESTADO` en el encabezado.
+- `constitucion/constitucion_politica_1991_derechos_fundamentales.txt` — **verificado**.
+  Artículos 13, 15, 16, 20, 23, 29 y 74 con texto literal completo, contrastado contra
+  Alcaldía de Bogotá – Régimen Legal (`alcaldiabogota.gov.co/sisjur`).
+- `leyes/ley_1581_2012_proteccion_datos.txt` — **verificado**. Artículos 1, 3, 4 (los 8
+  literales), 8, 9, 14, 15 y 16 con texto literal completo.
+- `leyes/decreto_1377_2013_reglamentario.txt` — **verificado**. Artículos 5, 21 y 23 con texto
+  literal completo (cubre solo una parte del decreto; se puede ampliar).
+- `leyes/ley_1266_2008_habeas_data_financiero.txt` — **pendiente**. No se encontró una fuente
+  con texto literal accesible (secretariasenado.gov.co no respondió; la página de Alcaldía de
+  Bogotá carga el articulado por JavaScript). El archivo documenta el intento y las fuentes
+  recomendadas a seguir. **No citar este archivo en producción hasta verificarlo.**
+- `jurisprudencia/` — vacío, ver su propio README.
 
 **Antes del evento, el equipo debe:**
-1. Verificar cada artículo contra el texto oficial (enlaces en el encabezado de cada archivo).
-2. Completar los artículos marcados como `[RESUMEN - completar con texto literal]`.
-3. Reemplazar esta carpeta con la que entregue la organización el día del evento (sección 9
-   del enunciado: kit de arranque con `/corpus` de 10-15 documentos ya descargados), fusionando
-   ambos conjuntos si aplica.
-4. Añadir 2-4 sentencias de la Corte Constitucional (carpeta `jurisprudencia/`) para reforzar
+1. Completar `ley_1266_2008_habeas_data_financiero.txt` con texto literal (ver notas de
+   intento dentro del archivo) — relevante para el caso de supresión por caducidad del reporte
+   en centrales de riesgo.
+2. Añadir 2-4 sentencias de la Corte Constitucional (carpeta `jurisprudencia/`) para reforzar
    E1 (RAG con corpus propio) y E2 (citas verificables).
+3. Re-ejecutar `python manage.py ingest_corpus --reset` (backend) cada vez que se edite algo
+   aquí, para reindexar la base vectorial.
+4. Si la organización entrega su propio kit con `/corpus` el día del evento (sección 9 del
+   enunciado), fusionarlo con esta carpeta en vez de reemplazarla.
 
 ## Formato esperado por el ingestor (`ML/scripts/01_prepare_corpus.py` y
 `backend/apps/rag/management/commands/ingest_corpus.py`)

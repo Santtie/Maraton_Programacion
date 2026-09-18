@@ -2,24 +2,34 @@ FUENTE: Constitución Política de Colombia (1991), Título II Capítulo 1 - De 
 NORMA: Constitución Política de Colombia, 1991
 URL: https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=4125
 FECHA_CONSULTA: 2026-09-18
-ESTADO: seed parcial - verificar literalidad completa de cada artículo antes del evento
+ESTADO: verificado
 
 ### Artículo 13
 Todas las personas nacen libres e iguales ante la ley, recibirán la misma protección y trato
 de las autoridades y gozarán de los mismos derechos, libertades y oportunidades sin ninguna
 discriminación por razones de sexo, raza, origen nacional o familiar, lengua, religión,
 opinión política o filosófica.
-[RESUMEN - completar con texto literal integral, incluye incisos 2 y 3 sobre igualdad real y
-efectiva, y protección especial a personas en circunstancia de debilidad manifiesta]
+
+El Estado promoverá las condiciones para que la igualdad sea real y efectiva y adoptará
+medidas en favor de grupos discriminados o marginados.
+
+El Estado protegerá especialmente a aquellas personas que por su condición económica, física
+o mental, se encuentren en circunstancia de debilidad manifiesta y sancionará los abusos o
+maltratos que contra ellas se cometan.
 
 ### Artículo 15
 Todas las personas tienen derecho a su intimidad personal y familiar y a su buen nombre, y el
 Estado debe respetarlos y hacerlos respetar. De igual modo, tienen derecho a conocer,
 actualizar y rectificar las informaciones que se hayan recogido sobre ellas en bancos de
 datos y en archivos de entidades públicas y privadas.
-[RESUMEN - completar con texto literal integral, incluye incisos sobre correspondencia,
-comunicaciones privadas, libros de contabilidad y documentos privados; fundamento directo del
-Habeas Data]
+
+La correspondencia y demás formas de comunicación privada son inviolables. Sólo pueden ser
+interceptadas o registradas mediante orden judicial, en los casos y con las formalidades que
+establezca la ley.
+
+Para efectos tributarios o judiciales y para los casos de inspección, vigilancia e
+intervención del Estado podrá exigirse la presentación de libros de contabilidad y demás
+documentos privados, en los términos que señale la ley.
 
 ### Artículo 16
 Todas las personas tienen derecho al libre desarrollo de su personalidad sin más
@@ -28,23 +38,29 @@ limitaciones que las que imponen los derechos de los demás y el orden jurídico
 ### Artículo 20
 Se garantiza a toda persona la libertad de expresar y difundir su pensamiento y opiniones, la
 de informar y recibir información veraz e imparcial, y la de fundar medios masivos de
-comunicación.
-[RESUMEN - completar con texto literal integral, incluye libertad de prensa, responsabilidad
-social de los medios y prohibición de censura]
+comunicación. Estos son libres y tienen responsabilidad social. Se garantiza el derecho a la
+rectificación en condiciones de equidad. No habrá censura.
 
 ### Artículo 23
 Toda persona tiene derecho a presentar peticiones respetuosas a las autoridades por motivos
-de interés general o particular y a obtener pronta resolución.
-[RESUMEN - completar con texto literal integral, incluye remisión a la ley para petición ante
-organizaciones privadas]
+de interés general o particular y a obtener pronta resolución. El legislador podrá reglamentar
+su ejercicio ante organizaciones privadas para garantizar los derechos fundamentales.
 
 ### Artículo 29
 El debido proceso se aplicará a toda clase de actuaciones judiciales y administrativas. Nadie
 podrá ser juzgado sino conforme a leyes preexistentes al acto que se le imputa, ante juez o
 tribunal competente y con observancia de la plenitud de las formas propias de cada juicio.
-[RESUMEN - completar con texto literal integral, incluye presunción de inocencia, derecho de
-defensa, principio de favorabilidad y nulidad de la prueba obtenida con violación del debido
-proceso]
+
+En materia penal, la ley permisiva o favorable, aun cuando sea posterior, se aplicará de
+preferencia a la restrictiva o desfavorable.
+
+Toda persona se presume inocente mientras no se la haya declarado judicialmente culpable.
+Quien sea sindicado tiene derecho a la defensa y a la asistencia de un abogado escogido por
+él, o de oficio, durante la investigación y el juzgamiento; a un debido proceso público sin
+dilaciones injustificadas; a presentar pruebas y a controvertir las que se alleguen en su
+contra; a impugnar la sentencia condenatoria, y a no ser juzgado dos veces por el mismo hecho.
+
+Es nula, de pleno derecho, la prueba obtenida con violación del debido proceso.
 
 ### Artículo 74
 Todas las personas tienen derecho a acceder a los documentos públicos salvo los casos que

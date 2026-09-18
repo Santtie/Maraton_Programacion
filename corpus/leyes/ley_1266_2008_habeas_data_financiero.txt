@@ -1,30 +1,42 @@
 FUENTE: Ley 1266 de 2008 - Disposiciones generales del Habeas Data financiero, crediticio,
 comercial, de servicios y proveniente de terceros países
 NORMA: Ley 1266 de 2008
-URL: PENDIENTE - localizar identificador correcto en secretariasenado.gov.co o
-suin-juriscol.gov.co antes del evento (intento con alcaldiabogota.gov.co i=33735 no
-correspondió a esta ley)
+URL: https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=117518
 FECHA_CONSULTA: 2026-09-18
-ESTADO: pendiente - este archivo es solo un placeholder de estructura, NO contiene texto
-verificado. No usar para responder consultas hasta completarlo.
+ESTADO: pendiente - artículos aún no verificados en texto literal, NO usar para citar en
+producción hasta completar este archivo (ver notas de intento al final)
 
 ### Artículo 1
 [PENDIENTE] Objeto de la ley: desarrollar el derecho constitucional al Habeas Data respecto
 de la información financiera, crediticia, comercial, de servicios y la proveniente de
-terceros países, y regular el manejo de dicha información.
+terceros países, y regular el manejo de dicha información. (Confirmado el epígrafe/título de
+la ley por una fuente secundaria confiable -Universidad de los Andes-, pero falta el texto
+literal completo del artículo).
 
 ### Artículo 3
 [PENDIENTE] Definiciones (titular, fuente de información, operador de información, usuario,
-dato financiero, dato de servicios, dato público).
+dato financiero, dato de servicios, dato público, dato semiprivado, dato privado).
 
 ### Artículo 13
-[PENDIENTE] Permanencia y caducidad del dato negativo. IMPORTANTE: al momento de redactar
-este seed no se cuenta con el texto literal verificado del plazo de caducidad del reporte
-negativo en centrales de riesgo. NO usar cifras de memoria en producción: completar este
-artículo con el texto oficial antes de que el asistente cite plazos de caducidad en casos de
-solicitud de supresión relacionados con centrales de riesgo (Datacrédito, CIFIN, etc.).
+[PENDIENTE - fuente secundaria, NO verbatim] Permanencia de la información. Una fuente
+secundaria (política de tratamiento de datos del Fondo Social para la Educación Superior,
+FSES, un ente público colombiano) explica -sin citar el artículo literalmente- que: la
+información positiva permanece de forma indefinida; la información negativa (moras/
+incumplimientos) tiene un plazo máximo de permanencia de 4 años contados desde que se
+atienda la obligación vencida, y si la mora fue inferior a 2 años, el reporte permanece solo
+por el doble del tiempo de la mora. Esta cifra es consistente con lo que se conoce
+públicamente de la Ley 1266 de 2008, pero DEBE verificarse contra el texto literal del
+Artículo 13 antes de usarse como cita legal en el asistente (el asistente no debe citar esta
+cifra hasta que este archivo pase a ESTADO: verificado).
 
-INSTRUCCIÓN PARA EL EQUIPO: buscar "Ley 1266 de 2008" en secretariasenado.gov.co o
-suin-juriscol.gov.co, copiar el texto literal de los artículos 1, 3, 8 (deberes de las
-fuentes), 16 (procedimiento de reclamos) y 13 (permanencia de la información), y reemplazar
-este archivo completo antes del evento.
+--- NOTAS DE INTENTO (para quien continúe la verificación) ---
+- secretariasenado.gov.co: no respondió (conexión rechazada) al intentar consultarlo.
+- alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=117518: es el "Compilatorio 1266 de 2008
+  Nivel Nacional" correcto (confirmado por búsqueda), pero la página carga el articulado por
+  JavaScript, así que una herramienta de solo-lectura de HTML no obtiene el texto; hay que
+  abrirla en un navegador real o buscar el PDF oficial.
+- Un PDF encontrado en una búsqueda (asset de terceros nombrado "Ley-1266-2008.pdf") resultó
+  ser en realidad la política interna de tratamiento de datos del FSES (que cita la Ley 1581
+  de 2012, no el texto de la Ley 1266 de 2008) - NO usar esa fuente.
+- Recomendado: SUIN-Juriscol (suin-juriscol.gov.co) o funcionpublica.gov.co/eva/gestornormativo
+  buscando "Ley 1266 de 2008" directamente, o el Diario Oficial No. 47.219.

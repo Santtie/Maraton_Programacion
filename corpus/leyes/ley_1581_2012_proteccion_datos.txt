@@ -2,7 +2,7 @@ FUENTE: Ley Estatutaria 1581 de 2012 - Disposiciones generales para la protecci�
 NORMA: Ley 1581 de 2012
 URL: https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=49981
 FECHA_CONSULTA: 2026-09-18
-ESTADO: seed parcial - verificar literalidad completa de cada artículo antes del evento
+ESTADO: verificado
 
 ### Artículo 1
 La presente ley tiene por objeto desarrollar el derecho constitucional que tienen todas las
@@ -30,9 +30,30 @@ como la recolección, almacenamiento, uso, circulación o supresión.
 ### Artículo 4
 Principios para el Tratamiento de datos personales. En el desarrollo, interpretación y
 aplicación de la presente ley, se aplicarán, de manera armónica e integral, los siguientes
-principios: legalidad en materia de Tratamiento de datos; finalidad; libertad; veracidad o
-calidad; transparencia; acceso y circulación restringida; seguridad; y confidencialidad.
-[RESUMEN - completar con la redacción literal de cada literal a) a h)]
+principios:
+a) Principio de legalidad en materia de Tratamiento de datos: El Tratamiento a que se refiere
+la presente ley es una actividad reglada que debe sujetarse a lo establecido en ella y en las
+demás disposiciones que la desarrollen.
+b) Principio de finalidad: El Tratamiento debe obedecer a una finalidad legítima de acuerdo
+con la Constitución y la Ley, la cual debe ser informada al Titular.
+c) Principio de libertad: El Tratamiento sólo puede ejercerse con el consentimiento, previo,
+expreso e informado del Titular. Los datos personales no podrán ser obtenidos o divulgados sin
+previa autorización, o en ausencia de mandato legal o judicial que releve el consentimiento.
+d) Principio de veracidad o calidad: La información sujeta a Tratamiento debe ser veraz,
+completa, exacta, actualizada, comprobable y comprensible. Se prohíbe el Tratamiento de datos
+parciales, incompletos, fraccionados o que induzcan a error.
+e) Principio de transparencia: En el Tratamiento debe garantizarse el derecho del Titular a
+obtener del Responsable del Tratamiento o del Encargado del Tratamiento, en cualquier momento
+y sin restricciones, información acerca de la existencia de datos que le conciernan.
+f) Principio de acceso y circulación restringida: El Tratamiento se sujeta a los límites que
+se derivan de la naturaleza de los datos personales, de las disposiciones de la presente ley y
+la Constitución.
+g) Principio de seguridad: La información sujeta a Tratamiento por el Responsable del
+Tratamiento o Encargado del Tratamiento se deberá manejar con las medidas técnicas, humanas y
+administrativas que sean necesarias para otorgar seguridad a los registros.
+h) Principio de confidencialidad: Todas las personas que intervengan en el Tratamiento de
+datos personales que no tengan la naturaleza de públicos están obligadas a garantizar la
+reserva de la información.
 
 ### Artículo 8
 Derechos de los Titulares. El Titular de los datos personales tendrá los siguientes derechos:
@@ -84,7 +105,6 @@ demora y la fecha en que se atenderá su reclamo, la cual en ningún caso podrá
 ocho (8) días hábiles siguientes al vencimiento del primer término.
 
 ### Artículo 16
-Procedimientos. En desarrollo del principio de legalidad, la Superintendencia de Industria y
-Comercio podrá imponer las sanciones establecidas en el artículo 23 de la presente ley previo
-el procedimiento aplicable, respetando el debido proceso.
-[RESUMEN - completar con el texto literal completo]
+Requisito de procedibilidad. El Titular o causahabiente sólo podrá elevar queja ante la
+Superintendencia de Industria y Comercio una vez haya agotado el trámite de consulta o
+reclamo ante el Responsable del Tratamiento o Encargado del Tratamiento.

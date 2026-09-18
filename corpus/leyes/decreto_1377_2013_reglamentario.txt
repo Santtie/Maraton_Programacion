@@ -2,7 +2,7 @@ FUENTE: Decreto 1377 de 2013 - Reglamentario de la Ley 1581 de 2012
 NORMA: Decreto 1377 de 2013
 URL: https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=53646
 FECHA_CONSULTA: 2026-09-18
-ESTADO: seed parcial - verificar literalidad completa de cada artículo antes del evento
+ESTADO: verificado
 
 ### Artículo 5
 Autorización del Titular. El Responsable del Tratamiento deberá adoptar procedimientos para
@@ -11,14 +11,24 @@ Titular para el Tratamiento de los mismos e informarle los datos personales que 
 recolectados así como todos los Tratamientos a los que serán sometidos sus datos personales.
 
 ### Artículo 21
-Área o persona responsable de atención a peticiones, consultas y reclamos. Los Responsables
-del Tratamiento deben designar un área o persona que asuma la función de protección de datos
-personales atendiendo las peticiones, consultas y reclamos de los Titulares, en ejercicio de
-los derechos a que se refiere la Ley 1581 de 2012 y el presente decreto.
-[RESUMEN - completar con texto literal integral]
+Del derecho de acceso. Los responsables y encargados del tratamiento deben establecer
+mecanismos sencillos y ágiles que se encuentren permanentemente disponibles a los Titulares
+con el fin de que estos puedan acceder a los datos personales que estén bajo el control de
+aquellos y ejercer sus derechos sobre los mismos. El Titular puede consultar gratuitamente sus
+datos personales al menos una vez cada mes calendario, y cada vez que existan modificaciones
+sustanciales de las políticas de tratamiento de datos personales que motiven nuevas consultas.
+Para consultas cuya periodicidad sea mayor a una vez cada mes calendario, el Responsable del
+Tratamiento o Encargado del Tratamiento sólo podrá cobrar al Titular los gastos de envío,
+reproducción y, en su caso, certificación de documentos.
+
+### Artículo 23
+Medios para el ejercicio de los derechos de los titulares. Todo Responsable y Encargado deberá
+designar a una persona o área que asuma la función de protección de datos personales, que dará
+trámite a las solicitudes de los Titulares, para el ejercicio de los derechos a que se refiere
+la Ley 1581 de 2012 y el presente decreto.
 
 NOTA: los plazos exactos para tramitar consultas (10 días hábiles) y reclamos (15 días
 hábiles, prórroga de 8 días hábiles) están fijados en la Ley 1581 de 2012, artículos 14 y 15
 (ver ley_1581_2012_proteccion_datos.txt), no en este decreto. El decreto reglamenta el
-procedimiento operativo (autorización, avisos de privacidad, registro nacional de bases de
-datos).
+procedimiento operativo (autorización, mecanismos de acceso, designación de responsable de
+atención, avisos de privacidad, registro nacional de bases de datos).
