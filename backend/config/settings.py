@@ -159,11 +159,18 @@ RAG_TOP_K = env.int("RAG_TOP_K", default=5)
 # alguna), no decide dominio (ver nota de diseño en apps/rag/services/domain_guard.py).
 RAG_DOMAIN_SCORE_THRESHOLD = env.float("RAG_DOMAIN_SCORE_THRESHOLD", default=0.30)
 
-LLM_PROVIDER = env("LLM_PROVIDER", default="ollama")  # "ollama" | "gemini" | "groq"
+LLM_PROVIDER = env("LLM_PROVIDER", default="ollama")  # "ollama" | "gemini" | "groq" | "local_hf"
 LLM_FALLBACK_PROVIDER = env("LLM_FALLBACK_PROVIDER", default="gemini")
 
 OLLAMA_BASE_URL = env("OLLAMA_BASE_URL", default="http://localhost:11434")
 OLLAMA_MODEL = env("OLLAMA_MODEL", default="proyectaduria-qwen")
+
+# "local_hf": sirve el modelo fusionado (salida de ML/scripts/04_merge_and_export.py, formato
+# HuggingFace normal) directo con transformers dentro del proceso de Django, sin Ollama ni
+# conversión a GGUF. Atajo útil mientras no se complete la conversión a GGUF con llama.cpp.
+LOCAL_HF_MODEL_PATH = env(
+    "LOCAL_HF_MODEL_PATH", default=str((REPO_ROOT / "ML" / "models" / "qwen-proyectaduria-merged"))
+)
 
 GEMINI_API_KEY = env("GEMINI_API_KEY", default="")
 GEMINI_MODEL = env("GEMINI_MODEL", default="gemini-2.0-flash")

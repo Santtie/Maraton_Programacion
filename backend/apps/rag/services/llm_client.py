@@ -74,6 +74,94 @@ class OllamaProvider(LLMProvider):
                 break
 
 
+class LocalHFProvider(LLMProvider):
+    """Sirve el modelo Qwen fine-tuneado (fusionado, formato HuggingFace normal) directo con
+    `transformers`, sin pasar por Ollama ni por una conversión a GGUF. Más pesado que Ollama
+    (carga el modelo dentro del propio proceso de Django) pero no requiere instalar/compilar
+    llama.cpp: sirve de atajo cuando ya se tiene el modelo fusionado (salida de
+    ML/scripts/04_merge_and_export.py) pero todavía no la conversión a GGUF.
+
+    El modelo se carga una sola vez (atributos de clase) y se reutiliza entre requests."""
+
+    name = "local_hf"
+    _model = None
+    _tokenizer = None
+
+    def __init__(self, model_path: str | None = None):
+        self.model_path = model_path or settings.LOCAL_HF_MODEL_PATH
+
+    def _ensure_loaded(self) -> None:
+        if LocalHFProvider._model is not None:
+            return
+        import torch
+        from transformers import AutoModelForCausalLM, AutoTokenizer
+
+        logger.info("Cargando modelo local HF desde %s...", self.model_path)
+        tokenizer = AutoTokenizer.from_pretrained(self.model_path, trust_remote_code=True)
+        if tokenizer.pad_token is None:
+            tokenizer.pad_token = tokenizer.eos_token
+
+        model = AutoModelForCausalLM.from_pretrained(
+            self.model_path,
+            trust_remote_code=True,
+            torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
+        )
+        # Ver ML/scripts/03_train_qwen_lora.py: device_map dispara un segfault en esta
+        # combinación de Windows/CUDA, por eso se mueve el modelo a mano en vez de usarlo.
+        if torch.cuda.is_available():
+            model = model.to("cuda")
+        model.eval()
+
+        LocalHFProvider._tokenizer = tokenizer
+        LocalHFProvider._model = model
+
+    def _build_inputs(self, system: str, user_message: str):
+        messages = [{"role": "system", "content": system}, {"role": "user", "content": user_message}]
+        text = LocalHFProvider._tokenizer.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True
+        )
+        return LocalHFProvider._tokenizer(text, return_tensors="pt").to(LocalHFProvider._model.device)
+
+    def generate(self, system: str, user_message: str) -> str:
+        import torch
+
+        self._ensure_loaded()
+        inputs = self._build_inputs(system, user_message)
+        with torch.no_grad():
+            output = LocalHFProvider._model.generate(
+                **inputs,
+                max_new_tokens=600,
+                temperature=0.3,
+                do_sample=True,
+                pad_token_id=LocalHFProvider._tokenizer.pad_token_id,
+            )
+        new_tokens = output[0][inputs["input_ids"].shape[1] :]
+        return LocalHFProvider._tokenizer.decode(new_tokens, skip_special_tokens=True)
+
+    def generate_stream(self, system: str, user_message: str) -> Iterator[str]:
+        import threading
+
+        from transformers import TextIteratorStreamer
+
+        self._ensure_loaded()
+        inputs = self._build_inputs(system, user_message)
+        streamer = TextIteratorStreamer(LocalHFProvider._tokenizer, skip_prompt=True, skip_special_tokens=True)
+        generation_kwargs = dict(
+            **inputs,
+            max_new_tokens=600,
+            temperature=0.3,
+            do_sample=True,
+            pad_token_id=LocalHFProvider._tokenizer.pad_token_id,
+            streamer=streamer,
+        )
+        thread = threading.Thread(target=LocalHFProvider._model.generate, kwargs=generation_kwargs)
+        thread.start()
+        for chunk in streamer:
+            if chunk:
+                yield chunk
+        thread.join()
+
+
 class GeminiProvider(LLMProvider):
     name = "gemini"
 
@@ -151,6 +239,8 @@ def _build_provider(name: str) -> LLMProvider:
         return GeminiProvider()
     if name == "groq":
         return GroqProvider()
+    if name == "local_hf":
+        return LocalHFProvider()
     raise ValueError(f"Proveedor de LLM desconocido: {name}")
 
 
