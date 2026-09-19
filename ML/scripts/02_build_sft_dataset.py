@@ -43,6 +43,17 @@ PASOS_HABEAS_DATA = {
         "Si no responden en ese plazo, puedes presentar una queja ante la Superintendencia "
         "de Industria y Comercio.",
     ],
+    "actualizacion_habeas_data": [
+        "Identifica el dato exacto que está desactualizado o incompleto y ten a la mano la "
+        "información correcta y vigente.",
+        "Presenta un reclamo escrito ante el responsable del tratamiento pidiendo que "
+        "actualicen ese dato, describiendo los hechos y adjuntando los soportes si los tienes.",
+        "El responsable debe incluir la leyenda 'reclamo en trámite' en un máximo de 2 días "
+        "hábiles tras recibir tu reclamo completo.",
+        "El plazo legal para resolver el reclamo es de 15 días hábiles, prorrogables 8 días "
+        "hábiles más si te informan el motivo.",
+        "Si no actualizan el dato, puedes acudir a la Superintendencia de Industria y Comercio.",
+    ],
     "rectificacion_habeas_data": [
         "Identifica el dato exacto que está incorrecto o desactualizado y consigue evidencia "
         "de cuál es el dato correcto.",
@@ -195,10 +206,11 @@ def main() -> None:
     write_jsonl(SFT_DIR / "val.jsonl", val_examples)
     print(f"train: {len(train_examples)} ejemplos -> {SFT_DIR / 'train.jsonl'}")
     print(f"val:   {len(val_examples)} ejemplos -> {SFT_DIR / 'val.jsonl'}")
-    print(
-        "\nDataset semilla pequeño: amplía gold_cases.jsonl y adversarial_cases.jsonl "
-        "(idealmente 100+ casos combinados) antes de entrenar en serio."
-    )
+    if len(examples) < 100:
+        print(
+            "\nDataset pequeño: amplía gold_cases.jsonl y adversarial_cases.jsonl "
+            "(idealmente 100+ casos combinados) antes de entrenar en serio."
+        )
 
 
 if __name__ == "__main__":

@@ -58,13 +58,29 @@ def main() -> None:
             bnb_4bit_use_double_quant=True,
         )
 
-    model = AutoModelForCausalLM.from_pretrained(
-        args.base_model,
-        trust_remote_code=True,
-        quantization_config=quant_config,
-        torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
-        device_map="auto" if torch.cuda.is_available() else None,
-    )
+    # El parámetro device_map (tanto "auto" como un dict fijo como {"": 0}) dispara la lógica
+    # de dispatch de `accelerate`, que en esta máquina (Windows + esta combinación de
+    # versiones de torch/accelerate/transformers) provoca un segmentation fault nativo -salvo
+    # cuando se usa cuantización con bitsandbytes, que tiene su propio camino de carga y sí
+    # requiere device_map-. Por eso: con --load-in-4bit se pasa device_map={"": 0}; sin
+    # cuantizar, se carga el modelo sin device_map (todo a CPU) y se mueve a la GPU a mano con
+    # .to(), evitando por completo esa ruta de accelerate.
+    if quant_config is not None:
+        model = AutoModelForCausalLM.from_pretrained(
+            args.base_model,
+            trust_remote_code=True,
+            quantization_config=quant_config,
+            torch_dtype=torch.bfloat16,
+            device_map={"": 0},
+        )
+    else:
+        model = AutoModelForCausalLM.from_pretrained(
+            args.base_model,
+            trust_remote_code=True,
+            torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
+        )
+        if torch.cuda.is_available():
+            model = model.to("cuda")
 
     lora_config = LoraConfig(
         r=args.lora_r,
@@ -91,7 +107,7 @@ def main() -> None:
         per_device_train_batch_size=args.batch_size,
         gradient_accumulation_steps=args.grad_accum,
         learning_rate=args.lr,
-        max_seq_length=args.max_seq_len,
+        max_length=args.max_seq_len,
         logging_steps=5,
         eval_strategy="epoch",
         save_strategy="epoch",
